@@ -28,8 +28,8 @@ def get_pc_choice():
     return random.randint(1, 3)
 
 def winner(player_choice, pc_choice):
-    result_key = (player_choice, pc_choice)
-    return results.get(result_key, "Choix invalides.")
+    result_winner = (player_choice, pc_choice)
+    return results.get(result_winner, "Choix invalides.")
 
 def main():
     print("---------------------☺---------------------")
