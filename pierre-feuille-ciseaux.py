@@ -1,4 +1,5 @@
 import random
+from Fonction import *
 
 # Dictionnaire pour les choix possibles et leur numéro associé
 choice_nb = {1: "la Pierre", 2: "la Feuille", 3: "le Ciseaux"}
@@ -17,12 +18,12 @@ results = {
 }
 
 # Fonction pour vérifier si un nombre est entier dans une plage donnée
-def ask_int(prompt, min_val, max_val):
+def ask_int(message, min_val, max_val):
     while True:
         try:
-            value = int(input(prompt))
-            if min_val <= value <= max_val:
-                return value
+            user_input = int(input(message))
+            if min_val <= user_input <= max_val:
+                return user_input
             else:
                 print(f"Veuillez choisir un nombre entre {min_val} et {max_val}.")
         except ValueError:
